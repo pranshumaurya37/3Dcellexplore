@@ -1096,6 +1096,26 @@
     html[data-theme="eye"] .auth-progress-stat strong,html[data-theme="eye"] .owner-user-name,html[data-theme="eye"] .owner-feedback-author { color:#514633; }
     html[data-theme="eye"] .auth-progress-stat span,html[data-theme="eye"] .owner-user-state,html[data-theme="eye"] .owner-user-meta,html[data-theme="eye"] .owner-empty,html[data-theme="eye"] .owner-feedback-comment { color:#766d56; }
     html[data-theme="eye"] .molecular-process-card>span:nth-of-type(2) { color:#6c644f; }
+    .support-section { display:grid;grid-template-columns:minmax(0,1fr) minmax(235px,310px);align-items:center;gap:30px;margin:0 5.4vw 50px;padding:25px;border:1px solid rgba(177,74,98,.18);border-radius:22px;background:radial-gradient(ellipse at 7% 0%,rgba(248,207,216,.38),transparent 42%),linear-gradient(145deg,#fffdfc,#fff4f5);box-shadow:0 24px 65px rgba(112,47,65,.075); }
+    .support-section .kicker { margin:0 0 11px; }
+    .support-section h2 { margin:0 0 10px;color:#50313c;font:600 clamp(25px,3vw,35px)/1.1 Manrope,sans-serif;letter-spacing:-.05em; }
+    .support-copy { max-width:590px;margin:0;color:#765f66;font-size:12px;line-height:1.7; }
+    .support-voluntary { margin:12px 0 0;padding:10px 12px;border-left:3px solid #bd526b;border-radius:0 9px 9px 0;background:rgba(255,255,255,.64);color:#765660;font-size:10px;line-height:1.55; }
+    .support-qr-card { display:grid;justify-items:center;gap:9px;padding:15px;border:1px solid rgba(151,76,94,.14);border-radius:16px;background:#fff;box-shadow:0 8px 24px rgba(112,47,65,.07); }
+    .support-qr { display:block;width:min(100%,260px);height:auto;aspect-ratio:1;object-fit:contain;background:#fff;image-rendering:pixelated; }
+    .support-qr-instruction { margin:0;color:#684852;font:600 9px 'DM Mono',monospace;text-align:center; }
+    .support-qr-save { display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 12px;border:1px solid #b84d66;border-radius:999px;background:#b84d66;color:#fff;text-decoration:none;font:600 8px 'DM Mono',monospace;transition:transform .16s,background .16s; }
+    .support-qr-save:hover,.support-qr-save:focus-visible { transform:translateY(-1px);background:#96394f;outline:2px solid rgba(196,81,106,.18);outline-offset:2px; }
+    html[data-theme="dark"] .support-section { border-color:rgba(174,215,190,.16);background:radial-gradient(ellipse at 7% 0%,rgba(70,119,102,.13),transparent 42%),linear-gradient(145deg,#1a292b,#152224);box-shadow:0 24px 65px rgba(0,0,0,.2); }
+    html[data-theme="dark"] .support-section h2 { color:#edf3e9; }
+    html[data-theme="dark"] .support-copy { color:#b9c7ba; }
+    html[data-theme="dark"] .support-voluntary { border-color:#a5e1bd;background:#203432;color:#d5e4d6; }
+    html[data-theme="eye"] .support-section { border-color:rgba(143,123,78,.18);background:radial-gradient(ellipse at 7% 0%,rgba(223,211,177,.32),transparent 42%),linear-gradient(145deg,#f9f6ed,#eee8d8);box-shadow:0 24px 65px rgba(77,64,40,.07); }
+    html[data-theme="eye"] .support-section h2 { color:#514633; }
+    html[data-theme="eye"] .support-copy { color:#6c644f; }
+    html[data-theme="eye"] .support-voluntary { border-color:#9f8249;background:rgba(255,253,245,.7);color:#6c644f; }
+    @media (max-width:760px) { .support-section { grid-template-columns:1fr;gap:18px;margin:0 20px 42px;padding:19px;border-radius:18px; }.support-qr-card { width:min(100%,340px);justify-self:center; } }
+    @media (max-width:420px) { .support-section { margin-right:12px;margin-left:12px;padding:15px; }.support-qr-card { padding:12px; } }
   </style>
   <script>
     try {
@@ -1668,6 +1688,19 @@
         </form>
       </div>
       <p class="feedback-privacy">After Firebase is connected, submissions are saved with your account and visible to the website owner. Please do not include sensitive personal information.</p>
+    </section>
+    <section class="support-section" id="support" aria-labelledby="supportTitle">
+      <div>
+        <div class="kicker"><span class="kicker-line"></span> Help this atlas grow</div>
+        <h2 id="supportTitle">Support Cell Atlas.</h2>
+        <p class="support-copy">If Cell Atlas has helped you learn, you can send a voluntary contribution using PhonePe or another UPI app. Your support helps cover hosting and create more interactive biology lessons.</p>
+        <p class="support-voluntary">Contributions are completely optional and are not required to use the website.</p>
+      </div>
+      <div class="support-qr-card">
+        <img class="support-qr" src="assets/phonepe-support-qr.jpeg" alt="PhonePe payment QR code for voluntary support of Cell Atlas" loading="lazy" decoding="async" />
+        <p class="support-qr-instruction">Scan with PhonePe or another UPI app</p>
+        <a class="support-qr-save" href="assets/phonepe-support-qr.jpeg" download="cell-atlas-phonepe-qr.jpeg">Download QR image</a>
+      </div>
     </section>
     <footer class="sources" id="sources">
       <div class="source-list"><span>SCIENCE SOURCES</span><a href="https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells" target="_blank" rel="noopener">OpenStax · Eukaryotic cells</a><a href="https://openstax.org/books/biology-2e/pages/5-1-components-and-structure" target="_blank" rel="noopener">OpenStax · Membranes</a><a href="https://openstax.org/books/biology-2e/pages/5-2-passive-transport" target="_blank" rel="noopener">OpenStax · Channels & carriers</a><a href="https://openstax.org/books/biology/pages/5-3-active-transport" target="_blank" rel="noopener">OpenStax · Active transport</a><a href="https://openstax.org/books/biology-2e/pages/9-1-signaling-molecules-and-cellular-receptors" target="_blank" rel="noopener">OpenStax · Receptors</a><a href="https://openstax.org/books/biology-2e/pages/7-2-glycolysis" target="_blank" rel="noopener">OpenStax · Glycolysis</a><a href="https://openstax.org/books/biology-2e/pages/7-4-oxidative-phosphorylation" target="_blank" rel="noopener">OpenStax · Oxidative phosphorylation</a><a href="https://www.ncbi.nlm.nih.gov/books/NBK9897/" target="_blank" rel="noopener">NCBI Bookshelf · ER, Golgi & lysosomes</a><a href="https://www.ncbi.nlm.nih.gov/books/NBK9896/" target="_blank" rel="noopener">NCBI Bookshelf · Mitochondria</a><a href="https://www.ncbi.nlm.nih.gov/books/NBK26858/" target="_blank" rel="noopener">NCBI Bookshelf · Peroxisomes</a><a href="https://www.ncbi.nlm.nih.gov/books/NBK26888/" target="_blank" rel="noopener">NCBI Bookshelf · Molecular motors</a></div>
