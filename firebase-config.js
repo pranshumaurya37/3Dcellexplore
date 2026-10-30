@@ -6,7 +6,7 @@
   Firebase web config is intended to be used by the client; never add private service-account keys here.
 */
 window.CELL_ATLAS_FIREBASE_CONFIG = {
-  apiKey: "AIzaSyAu3pVE7UwIV8n9lgL06mYd7yhvbeB2qGY",
+  apiKey: "AIzaSyBBrg3oSoOEt34ksAqmuNyd-gWWS8m4TSk",
   authDomain: "cell-atlas-bf7b9.firebaseapp.com",
   databaseURL: "https://cell-atlas-bf7b9-default-rtdb.firebaseio.com",
   projectId: "cell-atlas-bf7b9",
